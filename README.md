@@ -28,7 +28,7 @@ ft_ping is one of the projects in 42 cursus.
 - printf and its family
 - Your libft functions
 - You are allowed to use other functions to complete the bonus part as long as
-their use is justified during your defense. Be smart.
+  their use is justified during your defense. Be smart.
 - ATTENTION: **Usage of fcntl, poll, epoll is strictly forbidden.**
 
 ### Mandatory Part
@@ -38,14 +38,14 @@ their use is justified during your defense. Be smart.
   - [ping(8) - Linux man page](https://linux.die.net/man/8/ping)
   - [ping(1) — inetutils-ping — Debian stretch — Debian Manpages](https://manpages.debian.org/stretch/inetutils-ping/ping.1.en.html)
   - [ping - Wikipedia](https://ja.wikipedia.org/wiki/Ping)
-  - [GNU、ftpやpingなどネットワーク系基本パッケージ「inetutils」v2.0 | TECH+（テックプラス）](https://news.mynavi.jp/techplus/article/20210208-1710802/)
+  - [GNU、ftp や ping などネットワーク系基本パッケージ「inetutils」v2.0 | TECH+（テックプラス）](https://news.mynavi.jp/techplus/article/20210208-1710802/)
 - 以下のフラグを受け付ける必要がある。
-    - `-v`
-      - Verbose output. ICMP packets other than ECHO_RESPONSE that are received are listed.
-    - `-?`
-      - 公式のpingコマンドには。存在しない。
-      - おそらく help のようなオプションだと思う。
-- RTT行とDNSの逆引き解決を除いて、結果はinetutils-2.0の実装と同じインデントでなければなりません。
+  - `-v`
+    - Verbose output. ICMP packets other than ECHO_RESPONSE that are received are listed.
+  - `-?`
+    - 公式の ping コマンドには。存在しない。
+    - おそらく help のようなオプションだと思う。
+- RTT 行と DNS の逆引き解決を除いて、結果は inetutils-2.0 の実装と同じインデントでなければなりません。
 - パケット受信は ±30ms の遅延が許容されます。
 
 ### Bonus Part
