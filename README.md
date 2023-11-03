@@ -1,4 +1,5 @@
 # 42-ft_ping
+
 ft_ping is one of the projects in 42 cursus.
 
 ## 課題概要
@@ -14,14 +15,16 @@ ft_ping is one of the projects in 42 cursus.
 
 - gettimeofday.
 - exit.
-- inet_ntop. / inet_pton.
-- ntohs / htons.
+- [inet_ntop](https://linuxjm.osdn.jp/html/LDP_man-pages/man3/inet_ntop.3.html). / [inet_pton](https://linuxjm.osdn.jp/html/LDP_man-pages/man3/inet_pton.3.html).
+  - IPv4/IPv6アドレスの文字列とバイナリ表現の変換
+- [ntohs](https://linuxjm.osdn.jp/html/LDP_man-pages/man3/ntohs.3.html) / [htons](https://linuxjm.osdn.jp/html/LDP_man-pages/man3/htons.3.html).
+  - ネットワークバイトオーダーとホストバイトオーダーの変換
 - signal / alarm / usleep.
-- socket / setsockopt / close.
-- sendto / recvmsg.
+- [socket](https://linuxjm.osdn.jp/html/LDP_man-pages/man2/socket.2.html) / [setsockopt](https://linuxjm.osdn.jp/html/LDP_man-pages/man2/getsockopt.2.html) / close.
+- [sendto](https://linuxjm.osdn.jp/html/LDP_man-pages/man2/send.2.html) / [recvmsg](https://linuxjm.osdn.jp/html/LDP_man-pages/man2/recvmsg.2.html).
 - getpid / getuid.
-- getaddrinfo / getnameinfo / freeaddrinfo.
-- strerror / gai_strerror.
+- [getaddrinfo](https://linuxjm.osdn.jp/html/LDP_man-pages/man3/getaddrinfo.3.html) / [getnameinfo](https://linuxjm.osdn.jp/html/LDP_man-pages/man3/getnameinfo.3.html) / [freeaddrinfo](https://linuxjm.osdn.jp/html/LDP_man-pages/man3/getaddrinfo.3.html).
+- strerror / [gai_strerror](https://linuxjm.osdn.jp/html/LDP_man-pages/man3/getaddrinfo.3.html).
 - printf and its family
 - Your libft functions
 - You are allowed to use other functions to complete the bonus part as long as
@@ -70,3 +73,40 @@ their use is justified during your defense. Be smart.
    - Set the IP Time to Live.
  - `--ip-timestamp`
    - `-T timestamp option` と同じ。
+
+## メモ
+
+### ping コマンドってなんだ
+
+ICMP echo request/reply を使って
+
+`ping 127.0.0.1` や `ping google.com` のようにして実行
+
+## 作業環境
+
+### 送信されたパケット情報の見方
+
+#### Wireshark
+
+適当にインストールして使えばおk
+
+#### tcpdump
+
+`ping 127.0.0.1` を実行し、受信したパケットを hex と ACII で表示する。
+
+```sh
+sudo tcpdump -i lo0 -X -vvv
+```
+
+## 参考資料
+
+### ping の仕様
+
+### ネットワーク関連
+
+- [Internet Control Message Protocol - Wikipedia](https://ja.wikipedia.org/wiki/Internet_Control_Message_Protocol)
+- [RFC 792 - Internet Control Message Protocol](https://datatracker.ietf.org/doc/html/rfc792)
+
+### Linux コマンド
+
+- [とほほのtcpdump入門 - とほほのWWW入門](https://www.tohoho-web.com/ex/tcpdump.html)
